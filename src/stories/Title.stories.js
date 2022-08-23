@@ -1,4 +1,5 @@
-import Title from "./Title";
+// 앞에서 작성한 컴포넌트를 불러옵니다.
+import Title from "../components/Title";
 
 // title : 컴포넌트 이름으로, '/'를 넣어 카테고리화 할 수 있습니다.
 //         이후 예시에서 조금 더 자세히 설명합니다.
@@ -17,9 +18,6 @@ export default {
 // 템플릿을 만들어줍니다. 이 템플릿에서는
 // Title 컴포넌트가 args를 전달받아 props로 내려줍니다.
 const Template = (args) => <Title {...args} />;
-export const StorybookTitle = (args) => {
-  return <Title {...args} />;
-};
 
 // Storybook에서 확인하고 싶은 컴포넌트는 export const로 작성합니다.
 // 템플릿을 사용하여 Storybook에 넣어줄 스토리를 하나 만들어주었습니다.
