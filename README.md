@@ -1,71 +1,32 @@
-# Getting Started with Create React App
+# Story Book 실행
+```
+# npm
+$ npm run storybook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# yarn
+$ yarn storybook
+```
+## npm run storybook 했지만 실행 에러 발생했을 경우
+```
+package-lock.json, yarn.lock, node_modules 삭제
+npm cache clean --force
+npm install
+```
 
-## Available Scripts
+# Story Book 왜 사용하는가?
+* 스토리북은 UI 컴포넌트를 독립적인 환경에서 그려볼 수 있는 툴 중 하나이다. 
+* 최초 개발자뿐만 아니라 코드리뷰나 수정을 하는 다른 개발자나 디자이너도 쉽게 확인할 수 있는 장점이 있다.
+* 컴포넌트 구현과 스토리 작성을 병행하면 스토리로 옮기는 게 예상대로 되지 않을 때 저절로 설계의 결함을 발견하게 될 수 있다.
+* 다른 컴포넌트와 의존성이 낮아야 독립적인 환경에서 그리는 것이 가능하고, 재사용이 쉬워야 다른 곳에서도 그릴 수 있기 때문에 스토리 작성은 리팩토링 효과를 부수적으로 얻을 수 있다.
 
-In the project directory, you can run:
+# Story Book 을 작성하면서 어려웠던 점
+1. 하나의 컴포넌트가 많은 일을 할 떄 
+> 앱에서는 잘 작동되던 컴포넌트를 스토리북으로 옮겼을 때 에러 메세지를 만났다.
+> 스토리북은 앱과는 다른 독립적인 환경이기 때문에 앰에서 사용한 기능을 스토리북에서도 이해하고 처리하기 위한 작업이 필요하다. </br> 데이터가 필요하다던지 상위 컴포넌트와 연관 되어 독립된 컴포넌트로 스토리로 옮기기가 어려웠다.
 
-### `npm start`
+2. 컴포넌트가 다른 컴포넌트와 의존성을 가질 때
+> 컴포넌트 아래에 있을 때 문제가 없었지만 독립시켜 스토리에 넣었더니 다르게 그려지는 경우가 있었다
+> 부모의 스타일에 의존 하거나 스토리와 앱에서의 여백이 달라 예상치 못한 결과들이 나왔다. </br> 이런한 것들을 주의해서 설계가 필요하다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# StoryBook
+(에러 만날 때마다 리드미 추가 예정)
