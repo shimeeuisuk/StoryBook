@@ -26,4 +26,4 @@ jobs:
           aws-region: ap-northeast-2
 
       - name: Deploy
-        run: aws s3 sync storybook-static s3://simisimi/
+        run: yarn build-storybook && aws s3 sync storybook-static s3://simisimi/
