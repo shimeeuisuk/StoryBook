@@ -4,6 +4,19 @@ export default {
   title: "Buttons/Button",
   component: Button,
   argTypes: { handleClick: { action: "handleClick" } },
+  parameters: {
+    codeExample: `
+    /** 경로는 상황에 맞게 사용 **/
+    import EmptyState from 'src/startkit_module/pattern/EmptyState/EmptyState';
+    import { Sample } from 'src/startkit_module/sample';
+    
+    <EmptyState
+        desc="Lorem ipsum dolor sit amet consectetur."
+        title="Lorem ipsum dolor sit amet consectetur."
+        showIcon={true}
+        Sl_B_Btn={<Sample.Common.PrimaryOutlinedMediumButton />}
+    />`,
+  },
 };
 
 const Template = (args) => <Button {...args} />;
@@ -14,6 +27,7 @@ Red.args = {
   label: "Press Me222",
   size: "md",
 };
+
 export const Large = Template.bind({});
 Large.args = {
   backgroundColor: "red",
