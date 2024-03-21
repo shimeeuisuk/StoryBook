@@ -11,7 +11,7 @@ const Template = (args) => <Button {...args} />;
 export const Red = Template.bind({});
 Red.args = {
   backgroundColor: "red",
-  label: "Press Me",
+  label: "Press Me222",
   size: "md",
 };
 export const Large = Template.bind({});
