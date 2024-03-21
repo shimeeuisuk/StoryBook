@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 
 function Stack({ children, spacing = 2, direction = "row", wrap = false }) {

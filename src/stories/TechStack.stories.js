@@ -1,3 +1,4 @@
+import React from "react";
 import TechStack from "../components/TechStack";
 
 export default {

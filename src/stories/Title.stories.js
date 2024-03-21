@@ -1,4 +1,5 @@
 // 앞에서 작성한 컴포넌트를 불러옵니다.
+import React from "react";
 import Title from "../components/Title";
 
 // title : 컴포넌트 이름으로, '/'를 넣어 카테고리화 할 수 있습니다.

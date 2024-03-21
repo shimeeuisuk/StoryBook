@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { BsFillInboxFill } from "react-icons/bs";
 import { ImTrophy } from "react-icons/im";

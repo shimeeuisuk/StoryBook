@@ -1,3 +1,4 @@
+import React from "react";
 import LotateButton from "../components/Buttons/LotateButton";
 
 export default {

@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 
@@ -22,7 +23,8 @@ function TechStack({ text }) {
     },
   ];
   const pick = tech.find((el) => {
-    return el.text.toLowerCase() === text.toLowerCase();
+    // return el.text.toLowerCase() === text.toLowerCase();
+    return true
   });
   return (
     <>
