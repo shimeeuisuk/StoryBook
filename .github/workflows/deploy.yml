@@ -12,6 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: echo
+        run: 'echo "$KEY"'
+        shell: bash
+        env:
+          KEY: ${{secrets.AWS_ACCESS_KEY_ID}}
+
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:

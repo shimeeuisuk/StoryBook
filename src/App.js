@@ -1,4 +1,3 @@
-import LotateButton from "./components/Buttons/LotateButton";
 import Dropdown from "./components/Dropdown";
 
 function App() {

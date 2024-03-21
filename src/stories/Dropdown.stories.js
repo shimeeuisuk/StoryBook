@@ -8,6 +8,7 @@ export default {
     text2: { control: "text" },
     text3: { control: "text" },
     text4: { control: "text" },
+    ftsize: { control: "text" },
     bgcolor: { control: "color" },
   },
 };

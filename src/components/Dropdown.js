@@ -4,9 +4,16 @@ import { ImTrophy } from "react-icons/im";
 import { FaQuestionCircle } from "react-icons/fa";
 import { ImMenu } from "react-icons/im";
 
-export default function Dropdown({ text1, text2, text3, text4, bgcolor }) {
+export default function Dropdown({
+  text1,
+  text2,
+  text3,
+  text4,
+  bgcolor,
+  ftsize,
+}) {
   return (
-    <Nav bgcolor={bgcolor}>
+    <Nav bgcolor={bgcolor} ftsize={ftsize}>
       <li className="dropdown">
         <div className="dropdown-menu">
           {text1} <BsFillInboxFill className="icon" />
@@ -71,7 +78,7 @@ const Nav = styled.ul`
     display: block;
   }
   .dropdown-menu {
-    font-size: 20px;
+    font-size: ${(props) => props.ftsize || 20}px;
     cursor: pointer;
   }
   .dropdown-content {
